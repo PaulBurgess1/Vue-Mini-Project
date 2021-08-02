@@ -7,16 +7,29 @@
 
   <title>User Generator</title>
   <meta name="description" content="Vue.js mini project that generates users.">
-  <meta name="Paul Burgess" content="SitePoint">
+  <meta name="Paul Burgess" content="Vue.js Mini Project">
 
   <link rel="stylesheet" href="css/styles.css">
 
 </head>
 
 <body>
-  <div id="app"></div>
+  <!--App-->
+  <div id="app">
+    <img
+        v-bind:src="profile_pic"
+        :alt="`${first_name} ${last_name}`"
+      /><!--Need to use v-bind here-->
+    <h1>Hello {{first_name}} {{last_name}},</h1>
+    <h4>First Name: {{first_name}}</h4>
+    <h4>Last Name: {{last_name}}</h4>
+    <h4>Email: {{email}}</h4>
+    <h4>Username: {{username}}</h4>
+    <!--Button-->
+    <button @click="getUser()">Get Random User</button>
+  </div>
   
-  
+  <!--Vue + Js-->
   <script src="https://unpkg.com/vue@next"></script>
   <script src="app.js"></script>
 </body>

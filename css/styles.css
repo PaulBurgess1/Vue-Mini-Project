@@ -1,6 +1,48 @@
+:root{
+  --clr-primary: darkcyan;
+  --clr-secondary: lightcyan;
+  --clr-bg: lightgrey;
+}
+
 body{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+#app {
+  width: 25rem;
+  height: fit-content;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid var(--clr-primary);
+  background-color: var(--clr-bg);
+}
+img {
+  background-color: white;
+  border-radius: 50%;
+  border: 5px var(--clr-primary) solid;
+  margin-bottom: 1rem;
+  box-shadow: 1rem 1rem var(--clr-secondary)
+}
+/*Button*/
+button {
+  cursor: pointer;
+  display: inline-block;
+  background: var(--clr-primary);
+  color: white;
+  font-size: 2rem;
+  border: 0;
+  padding: 1rem 1.5rem;
+  box-shadow: 1rem 1rem var(--clr-secondary);
+  margin-bottom: 2rem;
+}
+
+button:hover {
+  transform: scale(1.02);
 }
